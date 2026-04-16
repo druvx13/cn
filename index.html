@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Comprehensive computer networking study portal with modules on basics, transmission media, network layer, transport layer, and network devices.">
+  <title>Computer Networks Portal | Home</title>
+  <style>:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --primary: #0f4c81;
+  --primary-soft: #eaf3ff;
+  --border: #dbe3ef;
+  --shadow: 0 10px 30px rgba(15, 76, 129, 0.08);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container {
+  width: min(1100px, 94%);
+  margin: 0 auto;
+}
+.site-header {
+  background: linear-gradient(135deg, #0f4c81 0%, #1e5f99 70%, #2d74b5 100%);
+  color: #fff;
+  padding: 18px 0 22px;
+  box-shadow: var(--shadow);
+}
+.site-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.5vw, 1.9rem);
+}
+.site-subtitle {
+  margin: 6px 0 0;
+  opacity: 0.95;
+  font-size: clamp(0.9rem, 1.9vw, 1rem);
+}
+.main-nav {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.main-nav a {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.92rem;
+}
+.main-nav a.active {
+  background: #fff;
+  color: var(--primary);
+  font-weight: 600;
+}
+.page {
+  padding: 22px 0 42px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.card h2, .card h3 {
+  margin-top: 0;
+  color: #0f3f6b;
+}
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 14px;
+}
+.topic-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+}
+.badge {
+  display: inline-block;
+  background: var(--primary-soft);
+  color: #0b3e6a;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+.menu-list {
+  margin: 0;
+  padding-left: 18px;
+}
+.menu-list li { margin: 7px 0; }
+.content-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  overflow-x: auto;
+  box-shadow: var(--shadow);
+}
+.content-wrapper table {
+  width: 100% !important;
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+.content-wrapper img { max-width: 100%; height: auto; }
+.footer-note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+@media (min-width: 780px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+  .topic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Computer Networks Learning Portal</h1>
+    <p class="site-subtitle">A complete, responsive reference site built from Modules 1–5, with direct content integration and quick navigation.</p>
+    <nav class="main-nav" aria-label="Primary"><a class="active" href="index.html">Home</a>
+        <a class="" href="1.html">Module 1</a>
+        <a class="" href="2.html">Module 2</a>
+        <a class="" href="3.html">Module 3</a>
+        <a class="" href="4.html">Module 4</a>
+        <a class="" href="5.html">Module 5</a></nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <section class="card">
+      <h2>Welcome and Study Overview</h2>
+      <p>This website consolidates foundational and advanced computer networking topics into a single structured learning experience. It covers the conceptual layers of communication, physical and wireless transmission mediums, routing and IP addressing, transport-layer protocol behavior, and the practical operation of network devices and traffic management systems.</p>
+      <p>Use the top navigation menu to open any module directly. Each module page contains the original educational content integrated in-place (no iframe embedding), while this index page provides high-level orientation, sequence guidance, and rapid topic access for desktop and mobile users.</p>
+    </section>
+
+    <section class="card">
+      <h2>Module Directory</h2>
+      <div class="topic-grid">
+        <article class="topic-item">
+          <span class="badge">Module 1</span>
+          <h3><a href="1.html">Basics of Computer Network</a></h3>
+          <p>Introduces networking fundamentals, why networks matter, and critical OSI-layer concepts used throughout the stack.</p>
+        </article>
+        <article class="topic-item">
+          <span class="badge">Module 2</span>
+          <h3><a href="2.html">Transmission Media</a></h3>
+          <p>Explains wired and wireless transmission channels, practical tradeoffs, and technologies like Ethernet and Bluetooth.</p>
+        </article>
+        <article class="topic-item">
+          <span class="badge">Module 3</span>
+          <h3><a href="3.html">Network Layer</a></h3>
+          <p>Focuses on IP addressing, subnetting, routing behavior, and NAT in modern internetwork operations.</p>
+        </article>
+        <article class="topic-item">
+          <span class="badge">Module 4</span>
+          <h3><a href="4.html">Transport Layer</a></h3>
+          <p>Compares TCP and UDP service models and details reliable transport, flow control, and multiplexing mechanisms.</p>
+        </article>
+        <article class="topic-item">
+          <span class="badge">Module 5</span>
+          <h3><a href="5.html">Network Devices & Protocols</a></h3>
+          <p>Describes operational roles of NICs, switches, routers, and load balancers used in real enterprise networks.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Recommended Learning Path</h2>
+        <ol>
+          <li><strong>Start with Module 1</strong> to establish conceptual grounding in layering, protocol roles, and communication principles.</li>
+          <li><strong>Continue to Module 2</strong> to connect those concepts to real physical and wireless media constraints.</li>
+          <li><strong>Move into Module 3</strong> for logical addressing and routing decisions that enable internetwork communication.</li>
+          <li><strong>Study Module 4</strong> to understand process-level communication, reliability tradeoffs, and transport semantics.</li>
+          <li><strong>Finish with Module 5</strong> to map theory to concrete infrastructure devices and production traffic distribution patterns.</li>
+        </ol>
+        <h3>Core Competencies Built by This Site</h3>
+        <ul>
+          <li>Layered protocol reasoning from physical signal to application process delivery.</li>
+          <li>Transmission-media selection based on bandwidth, cost, interference, range, and deployment complexity.</li>
+          <li>Routing and subnet planning for scalable and secure network segmentation.</li>
+          <li>Transport protocol choice aligned with reliability and latency requirements.</li>
+          <li>Practical understanding of infrastructure components used in modern enterprise and cloud networks.</li>
+        </ul>
+      </section>
+
+      <aside class="card">
+        <h3>Quick Menu</h3>
+        <ul class="menu-list">
+          <li><a href="1.html">Go to Module 1</a></li>
+          <li><a href="2.html">Go to Module 2</a></li>
+          <li><a href="3.html">Go to Module 3</a></li>
+          <li><a href="4.html">Go to Module 4</a></li>
+          <li><a href="5.html">Go to Module 5</a></li>
+        </ul>
+        <h3>Mobile-Friendly Features</h3>
+        <ul class="menu-list">
+          <li>Viewport configuration for smartphones and tablets.</li>
+          <li>Flexible layout with card grids that collapse to one column on narrow screens.</li>
+          <li>Horizontal overflow handling for large tables in module content.</li>
+          <li>Touch-friendly menu links with consistent spacing.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="card">
+      <h2>How to Use This Site Efficiently</h2>
+      <p>For revision sessions, use this index as a topic map: choose a module, review key sections, then return here to continue through the sequence. For exam preparation, prioritize conceptual links between modules—for example, how data-link framing supports IP forwarding, and how transport-layer ports complement network-layer addressing.</p>
+      <p>Because this site keeps all module pages internally linked and directly integrated, browsing remains fast and consistent across devices without nested browsing frames.</p>
+      <p class="footer-note">Tip: bookmark this index page as your entry point, then navigate by module using the same top menu on every page.</p>
+    </section>
+  </div>
+</main>
+
+</body>
+</html>

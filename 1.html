@@ -1,3 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Core foundations: network definition, OSI layers, protocol concepts, and architecture principles.">
+  <title>Basics of Computer Network</title>
+  <style>:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --primary: #0f4c81;
+  --primary-soft: #eaf3ff;
+  --border: #dbe3ef;
+  --shadow: 0 10px 30px rgba(15, 76, 129, 0.08);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container {
+  width: min(1100px, 94%);
+  margin: 0 auto;
+}
+.site-header {
+  background: linear-gradient(135deg, #0f4c81 0%, #1e5f99 70%, #2d74b5 100%);
+  color: #fff;
+  padding: 18px 0 22px;
+  box-shadow: var(--shadow);
+}
+.site-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.5vw, 1.9rem);
+}
+.site-subtitle {
+  margin: 6px 0 0;
+  opacity: 0.95;
+  font-size: clamp(0.9rem, 1.9vw, 1rem);
+}
+.main-nav {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.main-nav a {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.92rem;
+}
+.main-nav a.active {
+  background: #fff;
+  color: var(--primary);
+  font-weight: 600;
+}
+.page {
+  padding: 22px 0 42px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.card h2, .card h3 {
+  margin-top: 0;
+  color: #0f3f6b;
+}
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 14px;
+}
+.topic-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+}
+.badge {
+  display: inline-block;
+  background: var(--primary-soft);
+  color: #0b3e6a;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+.menu-list {
+  margin: 0;
+  padding-left: 18px;
+}
+.menu-list li { margin: 7px 0; }
+.content-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  overflow-x: auto;
+  box-shadow: var(--shadow);
+}
+.content-wrapper table {
+  width: 100% !important;
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+.content-wrapper img { max-width: 100%; height: auto; }
+.footer-note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+@media (min-width: 780px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+  .topic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Basics of Computer Network</h1>
+    <p class="site-subtitle">Core foundations: network definition, OSI layers, protocol concepts, and architecture principles.</p>
+    <nav class="main-nav" aria-label="Primary"><a class="" href="index.html">Home</a>
+        <a class="active" href="1.html">Module 1</a>
+        <a class="" href="2.html">Module 2</a>
+        <a class="" href="3.html">Module 3</a>
+        <a class="" href="4.html">Module 4</a>
+        <a class="" href="5.html">Module 5</a></nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="grid">
+      <section class="content-wrapper" aria-label="Module content">
 <div style="font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto;">
     <h2 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px;">1. Basics of Computer Network</h2>
     
@@ -253,3 +411,21 @@
 
     <p><strong>Conclusion:</strong> While the term is used in the physical sense at Layer 1, in the context of <em>logical application-to-application communication</em> referenced by this query, <strong>the Transport layer (Layer 4)</strong> bears the explicit responsibility for multiplexing and demultiplexing via port addressing.</p>
 </div>
+      </section>
+      <aside class="card">
+        <h3>Module Menu</h3>
+        <ul class="menu-list">
+          <li><a href="index.html">Back to Home</a></li>
+          <li><a href="1.html">Module 1: Basics</a></li>
+          <li><a href="2.html">Module 2: Transmission Media</a></li>
+          <li><a href="3.html">Module 3: Network Layer</a></li>
+          <li><a href="4.html">Module 4: Transport Layer</a></li>
+          <li><a href="5.html">Module 5: Devices & Protocols</a></li>
+        </ul>
+        <p class="footer-note">This page embeds the full original module content directly in the page for faster navigation and better mobile rendering.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+</body>
+</html>
