@@ -1,0 +1,255 @@
+<div style="font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto;">
+    <h2 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px;">1. Basics of Computer Network</h2>
+    
+    <p>The following exposition addresses the foundational principles of data communication architecture with rigorous adherence to established standards and a professional register.</p>
+
+    <h3 style="color: #444; margin-top: 20px;">1.1 Define a computer network. Why are networks important?</h3>
+    
+    <p><strong>Definition:</strong> A computer network is a structured interconnection of autonomous computing devices (nodes) via a combination of hardware, transmission media, and software protocols for the express purpose of resource sharing, data exchange, and collaborative processing.</p>
+
+    <p><strong>Importance and Justification:</strong><br>
+    The criticality of networks is predicated upon several socioeconomic and technical imperatives:</p>
+    <ul>
+        <li><strong>Resource Optimization:</strong> Networks facilitate the sharing of peripheral devices (e.g., high-volume printers, storage area networks) and computational power, yielding significant capital expenditure reductions and economies of scale.</li>
+        <li><strong>Information Dissemination and Redundancy:</strong> They enable real-time data replication and distributed database management, ensuring high availability and fault tolerance through redundancy.</li>
+        <li><strong>Communication Efficiency:</strong> Networks serve as the substrate for electronic mail, instant messaging, and Voice over IP (VoIP), collapsing temporal and geographic barriers and engendering a globalized operational environment.</li>
+        <li><strong>Centralized Administration:</strong> They permit unified security policy enforcement, software deployment, and user authentication across an entire enterprise domain.</li>
+    </ul>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">1.2 Explain the OSI Reference Model. List and describe the functions of each layer.</h3>
+    
+    <p>The Open Systems Interconnection (OSI) Reference Model, standardized as ISO/IEC 7498-1, constitutes a conceptual framework that partitions network communication into seven discrete strata of abstraction. Its primary function is to ensure interoperability between disparate systems and vendors.</p>
+
+    <!-- Table: OSI Model Layers -->
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; border: 2px solid #337ab7; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+        <thead>
+            <tr style="background-color: #d9edf7; color: #31708f;">
+                <th style="border: 1px solid #337ab7; padding: 10px; text-align: center; width: 10%;">Layer No.</th>
+                <th style="border: 1px solid #337ab7; padding: 10px; text-align: left; width: 20%;">Layer Name</th>
+                <th style="border: 1px solid #337ab7; padding: 10px; text-align: left;">Primary Functions and Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #337ab7; padding: 8px; text-align: center; font-weight: bold;">7</td>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Application</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Provides network services directly to the end-user application. It does not comprise the application itself (e.g., a web browser), but rather the protocols that enable the application to access the network (e.g., HTTP for web transfer). Functions include file transfer, email services, and directory services.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #337ab7; padding: 8px; text-align: center; font-weight: bold;">6</td>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Presentation</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Concerned with the <strong>syntax and semantics</strong> of transmitted information. It translates data between the application format and a network-standard format. Core responsibilities include character code translation (e.g., ASCII to EBCDIC), data encryption/decryption, and compression/decompression.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #337ab7; padding: 8px; text-align: center; font-weight: bold;">5</td>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Session</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Manages the <strong>dialog control</strong> between end-user application processes. It establishes, manages, and terminates communication sessions. It provides mechanisms for synchronization by inserting checkpoints into the data stream, allowing recovery from a disruption without restarting the entire transfer.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #337ab7; padding: 8px; text-align: center; font-weight: bold;">4</td>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Transport</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Responsible for <strong>process-to-process delivery</strong> of the entire message. It ensures end-to-end reliability through error recovery, flow control, and segmentation/reassembly of data streams. This layer provides both connection-oriented (TCP) and connectionless (UDP) services, abstracting the network's physical topology from upper layers.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #337ab7; padding: 8px; text-align: center; font-weight: bold;">3</td>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Network</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Governs <strong>logical addressing and routing</strong>. It determines the optimal physical path (routing) for data packets from source to destination across multiple intermediate networks (internetworking). The primary Protocol Data Unit (PDU) at this layer is the <em>packet</em>. It handles congestion control and logical addressing (e.g., IPv4, IPv6).</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #337ab7; padding: 8px; text-align: center; font-weight: bold;">2</td>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Data Link</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Provides <strong>node-to-node delivery</strong> across a single physical link. It transforms the raw transmission facility into a reliable link by framing data, detecting (and sometimes correcting) errors, and controlling media access (MAC). It is subdivided into Logical Link Control (LLC) and Media Access Control (MAC) sublayers. PDU: <em>Frame</em>.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #337ab7; padding: 8px; text-align: center; font-weight: bold;">1</td>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Physical</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Defines the <strong>mechanical, electrical, functional, and procedural</strong> characteristics required to establish, maintain, and deactivate the physical link. It deals with the transmission of raw bit streams (PDU: <em>Bits</em>) over physical media, including voltage levels, data rates, cable specifications, and connector pinouts.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">1.3 What is the TCP/IP model? How does it differ from the OSI model?</h3>
+    
+    <p>The Transmission Control Protocol/Internet Protocol (TCP/IP) model, also known as the Internet Protocol Suite, is the pragmatic, implementation-driven architectural blueprint upon which the global Internet is constructed.</p>
+
+    <p><strong>Differences from the OSI Model:</strong><br>
+    The distinction between the two models is ontological rather than merely numeric. The OSI model is <strong>prescriptive</strong> (a protocol-independent standard for how communication <em>should</em> occur), whereas the TCP/IP model is <strong>descriptive</strong> (a protocol-dependent description of how the Internet <em>does</em> operate). Specifically:</p>
+    <ol>
+        <li><strong>Genesis:</strong> OSI emerged from a formal standards committee (ISO) prior to protocol implementation. TCP/IP evolved from research (ARPANET) and was reverse-engineered into a model only after the protocols were operational.</li>
+        <li><strong>Layer Consolidation:</strong> The TCP/IP model amalgamates the OSI Presentation and Session layers into its single Application layer, reflecting a leaner, more vertical integration approach.</li>
+    </ol>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">1.4 Compare and contrast the OSI and TCP/IP models in terms of layers and functions.</h3>
+
+    <!-- Table: OSI vs TCP/IP -->
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; border: 2px solid #555; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+        <thead>
+            <tr style="background-color: #e0e0e0; color: #333;">
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 20%;">Feature</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 40%;">OSI Model (7 Layers)</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 40%;">TCP/IP Model (4 Layers)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Structure</td>
+                <td style="border: 1px solid #555; padding: 8px;">Strict hierarchical layering with distinct boundaries.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Hierarchical but with looser, more fluid inter-layer dependencies.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Layer Correlation</td>
+                <td style="border: 1px solid #555; padding: 8px;">
+                    1. Physical<br>
+                    2. Data Link<br>
+                    3. Network<br>
+                    4. Transport<br>
+                    5. Session<br>
+                    6. Presentation<br>
+                    7. Application
+                </td>
+                <td style="border: 1px solid #555; padding: 8px;">
+                    1. Network Access (Link)<br>
+                    2. Internet<br>
+                    3. Transport<br>
+                    4. Application
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Session & Presentation</td>
+                <td style="border: 1px solid #555; padding: 8px;">Defined as independent, discrete layers with explicit services for synchronization and data translation.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Functions are subsumed entirely within the <strong>Application Layer</strong>. If such services are required, they are implemented natively by the application protocol itself (e.g., MIME encoding in email).</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Network Layer</td>
+                <td style="border: 1px solid #555; padding: 8px;">Supports both connectionless (CLNP) and connection-oriented (CONS) communication.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Rigidly focused on connectionless packet-switching (IP) as the fundamental building block. Reliability is the <em>end-to-end</em> responsibility of the Transport layer.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Protocol Dependency</td>
+                <td style="border: 1px solid #555; padding: 8px;">Protocol-agnostic. It defines services and interfaces; any protocol suite can theoretically map to it.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Protocol-specific. Inextricably bound to the TCP/IP suite; the model is described by its own protocols.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Critique</td>
+                <td style="border: 1px solid #555; padding: 8px;">Praised for theoretical elegance and modularity but often criticized for complexity and "analysis paralysis."</td>
+                <td style="border: 1px solid #555; padding: 8px;">Praised for proven scalability and operational success but criticized for lacking clear distinction between specification and implementation.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">1.5 What are the advantages of using the layered approach in network design?</h3>
+    
+    <p>The layered architecture represents a foundational principle of modular software engineering applied to distributed systems. The advantages are manifold:</p>
+    <ol>
+        <li><strong>Encapsulation and Abstraction:</strong> Each layer provides a defined set of services to the layer immediately above it while concealing the implementation details of <em>how</em> those services are performed. This reduces complexity and cognitive load on developers.</li>
+        <li><strong>Interoperability and Standardization:</strong> By defining standard interfaces between layers, equipment from different manufacturers can interoperate seamlessly. A Cisco router (Layer 3) can forward frames from an Intel Network Interface Card (Layer 2) precisely because the interface expectations are standardized.</li>
+        <li><strong>Modularity and Facilitated Innovation:</strong> Modifications or upgrades to one layer (e.g., moving from copper Ethernet to fiber optics at the Physical layer) are transparent to the upper layers. The TCP/IP stack continues to function identically regardless of the underlying transmission medium.</li>
+        <li><strong>Simplified Troubleshooting:</strong> Failure analysis proceeds via isolation. If a user cannot connect to a website, one tests Layer 3 (Can I ping the IP?), then Layer 4 (Is the port listening?), then Layer 7 (Is the service responding with correct HTTP codes?). This compartmentalization is indispensable for network forensics.</li>
+    </ol>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">1.6 What is the main function of the Application layer in the OSI model? Provide examples of protocols operating at this layer.</h3>
+    
+    <p><strong>Main Function:</strong><br>
+    The Application layer serves as the <strong>interface between the user's software process and the network stack</strong>. It provides the <em>semantic</em> meaning of the communication. Crucially, this layer is <em>not</em> the application executable (e.g., <code>chrome.exe</code>); rather, it is the suite of protocols that enable the application to request and interpret network data.</p>
+
+    <p><strong>Protocol Exemplars (OSI Model):</strong></p>
+    <ul>
+        <li><strong>HTTP/HTTPS:</strong> Hypertext Transfer Protocol (Secure) for web browsing.</li>
+        <li><strong>SMTP:</strong> Simple Mail Transfer Protocol for email transmission.</li>
+        <li><strong>IMAP/POP3:</strong> Internet Message Access Protocol / Post Office Protocol for email retrieval.</li>
+        <li><strong>FTP:</strong> File Transfer Protocol for file repository access.</li>
+        <li><strong>DNS:</strong> Domain Name System for name-to-address resolution.</li>
+        <li><strong>SNMP:</strong> Simple Network Management Protocol for monitoring network devices.</li>
+    </ul>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">1.7 What are the key differences between connection-oriented and connectionless communication in the Transport layer?</h3>
+    
+    <p>At the Transport Layer (Layer 4), the choice between connection-oriented and connectionless services dictates the Quality of Service (QoS) paradigm.</p>
+
+    <!-- Table: Connection-Oriented vs Connectionless -->
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; border: 2px solid #555; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+        <thead>
+            <tr style="background-color: #e0e0e0; color: #333;">
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 20%;">Feature</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 40%;">Connection-Oriented (e.g., TCP)</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 40%;">Connectionless (e.g., UDP)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Pre-communication Handshake</td>
+                <td style="border: 1px solid #555; padding: 8px;">Mandatory. A virtual circuit is established via a three-way handshake (SYN, SYN-ACK, ACK) before data exchange.</td>
+                <td style="border: 1px solid #555; padding: 8px;">None. Data transmission begins immediately.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Reliability</td>
+                <td style="border: 1px solid #555; padding: 8px;">High. Guarantees delivery through positive acknowledgments (ACK) and automatic retransmission of lost or corrupted segments.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Unreliable. No guarantee of delivery, order, or duplicate protection.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Flow and Congestion Control</td>
+                <td style="border: 1px solid #555; padding: 8px;">Sophisticated algorithms (Sliding Window, Slow Start, AIMD) regulate transmission rate to match receiver capacity and network conditions.</td>
+                <td style="border: 1px solid #555; padding: 8px;">None. The sender may overwhelm the receiver or congest the network path.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Sequencing</td>
+                <td style="border: 1px solid #555; padding: 8px;">Strict. Segments are numbered and reordered at the receiver to reconstruct the original stream in the correct sequence.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Unordered. Packets may arrive in any order; reassembly is left to the application logic.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Overhead</td>
+                <td style="border: 1px solid #555; padding: 8px;">Higher header size (20 bytes minimum) and state maintenance.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Lower header size (8 bytes) and minimal state.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Use Case</td>
+                <td style="border: 1px solid #555; padding: 8px;">Applications requiring fidelity: File downloads, Email, Web browsing.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Applications tolerant of loss but sensitive to latency: VoIP, Video Conferencing, DNS queries.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">1.8 Explain the role of the Data Link layer in the OSI model.</h3>
+    
+    <p>The Data Link layer (Layer 2) serves a dualistic function of <strong>Media Access Control</strong> and <strong>Logical Link Control</strong>, effectively transforming the unreliable, raw bitstream of the Physical layer into a reliable, error-detected frame service for the Network layer.</p>
+
+    <p>Its specific responsibilities include:</p>
+    <ul>
+        <li><strong>Framing:</strong> Encapsulating the Network layer packet by adding a header and trailer to create a discrete unit of transmission called a <em>frame</em>.</li>
+        <li><strong>Physical Addressing (MAC):</strong> Adding source and destination hardware addresses (MAC addresses) to the frame header to identify the specific interface on the local network segment.</li>
+        <li><strong>Error Detection:</strong> Computing a checksum (CRC) appended to the frame trailer. The receiving node recalculates the checksum; a mismatch triggers frame discard (but typically <em>not</em> retransmission at this layer, as that is handled by Transport).</li>
+        <li><strong>Flow Control:</strong> Preventing a fast transmitter from drowning a slow receiver on the same link (e.g., using PAUSE frames in Ethernet).</li>
+        <li><strong>Access Control:</strong> Determining which device may transmit on a shared media at any given moment (e.g., CSMA/CD for legacy Ethernet, Token Passing for Token Ring).</li>
+    </ul>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">1.9 What is multiplexing, and which layer in the OSI model is responsible for it?</h3>
+    
+    <p><strong>Definition:</strong><br>
+    Multiplexing, in the context of network protocol stacks, is the process of combining multiple data streams or signals from different sources (or applications) into a single shared medium or channel. In the reverse direction, <strong>Demultiplexing</strong> is the process of separating the combined stream back into its constituent original parts and delivering them to the correct destination application.</p>
+
+    <p><strong>Responsible Layers:</strong><br>
+    The concept of multiplexing manifests in distinct forms across multiple layers of the OSI model, each with a different scope:</p>
+    
+    <ol>
+        <li><strong>Transport Layer (Layer 4):</strong> This is the <strong>primary locus of logical multiplexing</strong> in network architecture. The Transport layer uses <strong>Port Numbers</strong> to differentiate between multiple concurrent communication sessions occurring on the same host. For example, a single IP address may simultaneously receive email (TCP Port 143) and web traffic (TCP Port 80). The Transport layer demultiplexes the incoming stream and delivers the segment payload to the correct socket/application process.</li>
+        <li><strong>Physical Layer (Layer 1):</strong> This refers to <strong>physical signal multiplexing</strong>. Techniques such as Frequency Division Multiplexing (FDM), Time Division Multiplexing (TDM), or Wavelength Division Multiplexing (WDM) combine multiple physical signals over a shared copper, fiber, or wireless frequency spectrum.</li>
+    </ol>
+
+    <p><strong>Conclusion:</strong> While the term is used in the physical sense at Layer 1, in the context of <em>logical application-to-application communication</em> referenced by this query, <strong>the Transport layer (Layer 4)</strong> bears the explicit responsibility for multiplexing and demultiplexing via port addressing.</p>
+</div>
