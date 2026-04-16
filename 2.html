@@ -1,0 +1,446 @@
+<div style="font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto;">
+    <h2 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px;">2. Transmission Media</h2>
+    
+    <p>This section provides a comprehensive analysis of the physical conduits and topological arrangements through which data signals propagate. The discourse encompasses guided and unguided media, selection criteria, and fundamental data link layer technologies.</p>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.1 What are the different types of transmission media used in computer networks?</h3>
+    
+    <p>Transmission media can be taxonomically bifurcated into two primary categories based on the physical guidance of the signal path.</p>
+
+    <!-- Table: Types of Transmission Media -->
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; border: 2px solid #337ab7; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+        <thead>
+            <tr style="background-color: #d9edf7; color: #31708f;">
+                <th style="border: 1px solid #337ab7; padding: 10px; text-align: left; width: 25%;">Category</th>
+                <th style="border: 1px solid #337ab7; padding: 10px; text-align: left; width: 25%;">Subtype</th>
+                <th style="border: 1px solid #337ab7; padding: 10px; text-align: left;">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold; vertical-align: top;" rowspan="3">Guided Media (Wired/Bounded)</td>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Twisted Pair Cable</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Consists of insulated copper conductors twisted together to mitigate electromagnetic interference (EMI). Variants include Unshielded Twisted Pair (UTP) and Shielded Twisted Pair (STP).</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Coaxial Cable</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Features a central copper conductor surrounded by a dielectric insulator, a braided metallic shield, and an outer jacket.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Fiber Optic Cable</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Transmits data as pulses of light through a core of glass or plastic fiber, utilizing the principle of total internal reflection.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold; vertical-align: top;" rowspan="3">Unguided Media (Wireless)</td>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Radio Waves</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Omnidirectional waves suitable for broadcast communication over long distances (e.g., AM/FM radio, Wi-Fi).</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Microwaves</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">High-frequency directional waves requiring line-of-sight alignment between parabolic dish antennas.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #337ab7; padding: 8px; font-weight: bold;">Infrared</td>
+                <td style="border: 1px solid #337ab7; padding: 8px;">Short-range, line-of-sight communication using light waves just below the visible spectrum (e.g., remote controls).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.2 Explain the difference between wired and wireless transmission media with examples.</h3>
+    
+    <p>The fundamental distinction resides in the propagation mechanism and the resultant security and mobility characteristics.</p>
+
+    <!-- Table: Wired vs Wireless -->
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; border: 2px solid #555; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+        <thead>
+            <tr style="background-color: #e0e0e0; color: #333;">
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 20%;">Feature</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 40%;">Wired (Guided) Media</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 40%;">Wireless (Unguided) Media</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Propagation Medium</td>
+                <td style="border: 1px solid #555; padding: 8px;">Physical conductor (Copper, Glass).</td>
+                <td style="border: 1px solid #555; padding: 8px;">Free space (Air, Vacuum).</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Directionality</td>
+                <td style="border: 1px solid #555; padding: 8px;">High directionality; signal follows the cable path precisely.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Omnidirectional or highly directional (Line-of-Sight).</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Security</td>
+                <td style="border: 1px solid #555; padding: 8px;">Inherently more secure. Interception requires physical access (tapping) to the cable infrastructure.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Inherently insecure. Signals are broadcast openly and are susceptible to eavesdropping; requires encryption (e.g., WPA3).</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Mobility</td>
+                <td style="border: 1px solid #555; padding: 8px;">Stationary; user device must be tethered to a physical port.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Mobile; supports nomadic and seamless roaming.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Attenuation/Interference</td>
+                <td style="border: 1px solid #555; padding: 8px;">Attenuation is predictable and managed via repeaters. EMI is a concern for copper but not fiber.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Highly susceptible to atmospheric conditions (rain fade), multipath reflection, and radio frequency interference (RFI).</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Example Technologies</td>
+                <td style="border: 1px solid #555; padding: 8px;">
+                    <strong>Copper:</strong> 1000BASE-T Gigabit Ethernet.<br>
+                    <strong>Fiber:</strong> 10GBASE-LR Long Reach Ethernet.
+                </td>
+                <td style="border: 1px solid #555; padding: 8px;">
+                    <strong>Short Range:</strong> Bluetooth, Wi-Fi (IEEE 802.11).<br>
+                    <strong>Long Range:</strong> Satellite Uplink, 4G/5G Cellular.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.3 What are the main issues involved in choosing transmission media for a network?</h3>
+    
+    <p>The selection of an appropriate transmission medium is a multi-objective optimization problem governed by the following critical criteria:</p>
+    <ol>
+        <li><strong>Bandwidth and Throughput Requirements:</strong> The volume of data per unit time the medium must sustain. Fiber optic cable is mandated for backbone links exceeding 10 Gbps, whereas UTP may suffice for endpoint access.</li>
+        <li><strong>Distance and Attenuation Limits:</strong> The maximum segment length before signal regeneration is required. Coaxial and UTP are constrained to hundreds of meters, while single-mode fiber can span tens of kilometers without amplification.</li>
+        <li><strong>Electromagnetic Interference (EMI) Environment:</strong> In industrial settings replete with heavy machinery or motors, copper cabling (even STP) may experience crippling noise. Fiber optic cable, being dielectric, is entirely immune to EMI and Radio Frequency Interference (RFI).</li>
+        <li><strong>Cost Considerations:</strong> Includes both <em>Capital Expenditure (CAPEX)</em>—the cost of the cable, connectors, and transceivers—and <em>Operational Expenditure (OPEX)</em>—the labor for installation and maintenance. Fiber installation requires specialized, costly precision equipment compared to simple RJ45 UTP crimping.</li>
+        <li><strong>Physical Topology and Installation Constraints:</strong> The ease of routing through building risers, plenum spaces, or historic structures. Wireless is often the only viable solution where drilling or trenching is prohibited.</li>
+        <li><strong>Security Policy:</strong> Environments handling classified or Protected Health Information (PHI) may mandate fiber optics within secure conduits to eliminate the risk of passive electromagnetic eavesdropping.</li>
+    </ol>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.4 Describe the structure of coaxial cables. What are its advantages and disadvantages?</h3>
+    
+    <p><strong>Structure:</strong><br>
+    Coaxial cable exhibits a concentric, cylindrical architecture designed to confine the electromagnetic field exclusively within the dielectric space between the center conductor and the shield.</p>
+    <ul>
+        <li><strong>Core Conductor:</strong> A solid copper or copper-clad steel wire carrying the primary signal.</li>
+        <li><strong>Dielectric Insulator:</strong> A non-conductive foam or plastic layer maintaining precise spacing and impedance (e.g., 50Ω or 75Ω).</li>
+        <li><strong>Metallic Shield:</strong> A braided copper mesh or foil tube serving a dual function: (1) <strong>Ground Reference</strong> for the signal return path, and (2) <strong>Faraday Cage</strong> blocking external interference.</li>
+        <li><strong>Outer Jacket:</strong> A durable PVC or Teflon sheath providing mechanical and environmental protection.</li>
+    </ul>
+
+    <p><strong>Advantages:</strong></p>
+    <ul>
+        <li><strong>High Bandwidth Capacity:</strong> Supports broadband transmission (multiple frequency channels concurrently) ideal for Cable TV (CATV) and legacy Ethernet (10BASE5).</li>
+        <li><strong>Excellent Noise Immunity:</strong> The braided shielding provides superior resistance to crosstalk and EMI compared to UTP.</li>
+        <li><strong>Longer Reach:</strong> Greater segment length capability (e.g., 500m for 10BASE5) compared to early twisted pair standards.</li>
+    </ul>
+
+    <p><strong>Disadvantages:</strong></p>
+    <ul>
+        <li><strong>Physical Rigidity and Bulk:</strong> Difficult to install in tight corners, conduits, or cable trays due to its thickness and minimum bend radius.</li>
+        <li><strong>Cost:</strong> More expensive per linear foot than UTP Category cable.</li>
+        <li><strong>Connector Complexity:</strong> Requires specialized BNC or F-type compression connectors, which are more time-consuming to terminate than RJ45 plugs.</li>
+        <li><strong>Single Point of Failure:</strong> A break or short in the bus topology (common with coax) disables the entire network segment.</li>
+    </ul>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.5 What is UTP (Unshielded Twisted Pair)? How is it different from STP (Shielded Twisted Pair)?</h3>
+    
+    <p><strong>Unshielded Twisted Pair (UTP):</strong><br>
+    UTP consists of four pairs of color-coded copper wires (22-24 AWG), each pair twisted at a specific pitch (twists per inch). The twisting mechanism cancels out <strong>Common Mode Noise</strong> via differential signaling. It relies solely on the geometry of the twist and the cancellation effect of balanced signals for noise immunity. It is categorized (Cat5e, Cat6, Cat6a) based on transmission performance.</p>
+
+    <p><strong>Shielded Twisted Pair (STP):</strong><br>
+    STP augments the UTP design with an additional conductive barrier. This shielding comes in two primary forms:</p>
+    <ol>
+        <li><strong>Foil Shield (F/UTP):</strong> An overall aluminum foil wrap encasing all four pairs.</li>
+        <li><strong>Individual Foil Shield (S/FTP):</strong> Foil wrapped around <em>each</em> individual pair, plus an overall braided shield.</li>
+    </ol>
+
+    <!-- Table: UTP vs STP -->
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; border: 2px solid #555; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+        <thead>
+            <tr style="background-color: #e0e0e0; color: #333;">
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 20%;">Feature</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 40%;">UTP (Unshielded Twisted Pair)</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 40%;">STP (Shielded Twisted Pair)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Noise Rejection</td>
+                <td style="border: 1px solid #555; padding: 8px;">Moderate. Relies entirely on twist cancellation. Susceptible to Alien Crosstalk (AXT) in high-density bundles.</td>
+                <td style="border: 1px solid #555; padding: 8px;">High. The shield diverts EMI to ground, providing 40-60 dB of additional isolation.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Grounding Requirement</td>
+                <td style="border: 1px solid #555; padding: 8px;">None.</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Critical.</strong> The shield must be bonded to ground at exactly one point to prevent it from acting as an antenna or creating a ground loop.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Cost</td>
+                <td style="border: 1px solid #555; padding: 8px;">Low. The industry standard for office LANs.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Higher material and installation labor cost (specialized shielded RJ45 connectors required).</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Flexibility & Bend Radius</td>
+                <td style="border: 1px solid #555; padding: 8px;">High. Easy to route.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Lower. The shield makes the cable stiffer and thicker.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Primary Application</td>
+                <td style="border: 1px solid #555; padding: 8px;">General office cubicles, residential LAN.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Industrial plants, data centers near power infrastructure, medical imaging facilities.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.6 What is Fiber Optic Cable, and why is it considered superior to other transmission media?</h3>
+    
+    <p><strong>Definition:</strong><br>
+    Fiber optic cable is a dielectric waveguide that transmits photonic energy (light) rather than electronic current. It comprises a cylindrical <strong>Core</strong> (high refractive index) surrounded by a <strong>Cladding</strong> (lower refractive index). Light injected into the core at an angle less than the critical angle undergoes <strong>Total Internal Reflection</strong>, propagating along the fiber with minimal loss.</p>
+
+    <p><strong>Superiority Justification:</strong><br>
+    Fiber's preeminence over copper-based media (UTP/Coax) is rooted in physics and information theory:</p>
+    <ol>
+        <li><strong>Theoretical Bandwidth Limit:</strong> The carrier frequency of light (~193 THz in the 1550 nm band) is several orders of magnitude higher than the maximum usable frequency of copper (~500 MHz for Cat6a). This translates to <strong>practically unlimited bandwidth</strong>. Modern Dense Wavelength Division Multiplexing (DWDM) can transmit over 100 channels of 400 Gbps each on a single strand.</li>
+        <li><strong>Immunity to Electromagnetic Interference:</strong> Photons are electrically neutral. Consequently, fiber is impervious to lightning strikes, high-voltage power lines, and Electromagnetic Pulse (EMP) events. This ensures signal integrity in electrically hostile environments.</li>
+        <li><strong>Low Attenuation and Long Distance:</strong> Signal loss in optical fiber is governed by Rayleigh scattering and absorption peaks. Standard Single-Mode Fiber (SMF) exhibits attenuation as low as <strong>0.2 dB/km</strong> at 1550 nm, permitting unrepeatered spans of 80-120 km. In contrast, copper Ethernet is strictly limited to 100 meters.</li>
+        <li><strong>Security (Intrusion Detection):</strong> Tapping a fiber optic line causes a detectable drop in light intensity (loss of signal) and leaks visible light. It is significantly more difficult to intercept undetected compared to reading the magnetic field of a copper wire.</li>
+    </ol>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.7 Discuss the various frequency ranges used in wireless communication (HF, VHF, UHF).</h3>
+    
+    <p>The radio frequency (RF) spectrum is partitioned into bands defined by the International Telecommunication Union (ITU), each exhibiting unique propagation behaviors.</p>
+
+    <!-- Table: RF Spectrum Bands -->
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; border: 2px solid #555; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+        <thead>
+            <tr style="background-color: #e0e0e0; color: #333;">
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 15%;">Band</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 20%;">Frequency Range</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 35%;">Propagation Characteristics</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 30%;">Networking Application</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">HF (High Frequency)</td>
+                <td style="border: 1px solid #555; padding: 8px;">3 MHz – 30 MHz</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Skywave Propagation.</strong> Signals reflect off the ionosphere and the earth's surface, enabling <strong>over-the-horizon</strong> communication spanning thousands of kilometers. Highly susceptible to diurnal solar variation.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Amateur Radio, Maritime distress, Legacy Shortwave Broadcasting, some military tactical links.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">VHF (Very High Frequency)</td>
+                <td style="border: 1px solid #555; padding: 8px;">30 MHz – 300 MHz</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Line-of-Sight / Space Wave.</strong> Signals pass through the ionosphere; they do not reflect. Penetration through buildings is moderate. Excellent for short to medium range voice and data.</td>
+                <td style="border: 1px solid #555; padding: 8px;">FM Radio (88-108 MHz), Air Traffic Control (118-137 MHz), Marine VHF Radio.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">UHF (Ultra High Frequency)</td>
+                <td style="border: 1px solid #555; padding: 8px;">300 MHz – 3 GHz</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Line-of-Sight / Diffraction.</strong> Shorter wavelengths allow more compact antennas and higher data rates. Superior building penetration (small apertures) compared to VHF. Dominant band for modern digital networking.</td>
+                <td style="border: 1px solid #555; padding: 8px;">
+                    <strong>Cellular:</strong> 4G LTE (700 MHz - 2.6 GHz), 5G (Sub-6 GHz).<br>
+                    <strong>Wi-Fi:</strong> 2.4 GHz and 5 GHz bands.<br>
+                    <strong>Bluetooth:</strong> 2.4 GHz ISM band.<br>
+                    <strong>GPS:</strong> 1.5 GHz.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.8 Explain the concept of Microwave transmission and its application in networking.</h3>
+    
+    <p><strong>Concept:</strong><br>
+    Microwave transmission utilizes electromagnetic waves in the <strong>Super High Frequency (SHF)</strong> and <strong>Extremely High Frequency (EHF)</strong> bands, typically ranging from <strong>1 GHz to 300 GHz</strong>. Unlike lower frequency radio waves, microwaves behave akin to light beams; they travel in highly directional, straight lines and are focused by parabolic dish antennas.</p>
+
+    <p><strong>Key Characteristics:</strong></p>
+    <ul>
+        <li><strong>Line-of-Sight (LoS):</strong> The transmitting and receiving antennas must have a clear, unobstructed visual path. The <strong>Fresnel Zone</strong> (an ellipsoid-shaped area around the visual line-of-sight) must also be free of obstructions to prevent signal diffraction loss.</li>
+        <li><strong>High Gain Antennas:</strong> Parabolic reflectors concentrate radiated power into a narrow beamwidth, increasing the Effective Isotropic Radiated Power (EIRP) and enabling long-range links (typically 30-50 km for terrestrial hops).</li>
+    </ul>
+
+    <p><strong>Applications in Networking:</strong></p>
+    <ol>
+        <li><strong>Telecommunications Backhaul:</strong> Connecting cellular base stations (Cell Towers) to the core telephone network where laying fiber optic cable is economically or topographically infeasible (e.g., across mountain ranges or rivers).</li>
+        <li><strong>Satellite Communication:</strong> The primary means of data and television broadcasting via Geostationary Earth Orbit (GEO) or Low Earth Orbit (LEO) constellations (e.g., Starlink). Uplink frequencies (e.g., 14 GHz) are distinct from downlink frequencies (e.g., 11 GHz).</li>
+        <li><strong>Enterprise Private Networks:</strong> Point-to-point links bridging two corporate campuses separated by a few miles or a major highway without relying on public right-of-way trenching.</li>
+    </ol>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.9 What are the different network topologies? Explain each one with their advantages and disadvantages.</h3>
+    
+    <p>Network topology refers to the geometric arrangement of nodes and links.</p>
+
+    <!-- Table: Network Topologies -->
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; border: 2px solid #555; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+        <thead>
+            <tr style="background-color: #e0e0e0; color: #333;">
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 15%;">Topology</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 25%;">Description</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 30%;">Advantages</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 30%;">Disadvantages</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Bus</td>
+                <td style="border: 1px solid #555; padding: 8px;">All devices share a single backbone cable (coaxial). Signal propagates to all ends.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Easy to extend; minimal cabling.</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Single point of failure</strong> (cable break kills whole network); difficult to troubleshoot; low security (promiscuous listening).</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Ring</td>
+                <td style="border: 1px solid #555; padding: 8px;">Devices connected in a closed loop. Data travels unidirectionally or bidirectionally. <em>Example: Token Ring, FDDI.</em></td>
+                <td style="border: 1px solid #555; padding: 8px;">Equal access; no collisions.</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Single point of failure</strong> (unless dual-ring with redundancy); adding/removing nodes disrupts network.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Star</td>
+                <td style="border: 1px solid #555; padding: 8px;">All devices connect to a central hub or switch. <em>Predominant modern LAN topology.</em></td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>High fault tolerance</strong> (one link failure isolates only one node); easy adds/moves/changes; centralized management.</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Central node dependency</strong> (switch failure is catastrophic); requires more cabling than Bus.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Mesh</td>
+                <td style="border: 1px solid #555; padding: 8px;">Every node connects directly to every other node (<em>Full Mesh</em>) or to several others (<em>Partial Mesh</em>).</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Maximum redundancy and fault tolerance</strong>; optimal path selection.</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Extreme cost and complexity</strong> in cabling and routing. Number of links = \( n(n-1)/2 \). Used primarily for WAN backbone routers, not endpoints.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px; font-weight: bold;">Tree (Hierarchical)</td>
+                <td style="border: 1px solid #555; padding: 8px;">A hybrid topology combining multiple Star networks connected to a linear Bus backbone.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Scalable; allows grouping of users; effective isolation of broadcast domains.</td>
+                <td style="border: 1px solid #555; padding: 8px;">Failure of the root or backbone switch severs large sections of the network.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.10 Describe the Data Link layer design issues. What protocols are commonly used at this layer?</h3>
+    
+    <p><strong>Design Issues:</strong><br>
+    The Data Link Layer must provide a reliable, error-aware service interface to the Network Layer while managing the complexities of the raw Physical Layer bit pipe. The primary design challenges are:</p>
+    <ol>
+        <li><strong>Framing:</strong> Delineating the beginning and end of a data block within the continuous bit stream. Methods include character count, flag bytes with byte stuffing (PPP), or bit stuffing (HDLC).</li>
+        <li><strong>Error Control:</strong> Detecting and (optionally) correcting errors introduced by noise on the physical line. Achieved via Cyclic Redundancy Check (CRC) and retransmission protocols (ARQ).</li>
+        <li><strong>Flow Control:</strong> Preventing a fast transmitter from overwhelming a slow receiver's buffer. Achieved via Stop-and-Wait or Sliding Window mechanisms.</li>
+        <li><strong>Media Access Control (MAC):</strong> Resolving contention for a shared medium (collision domain). This involves protocols for channel allocation (e.g., CSMA/CD, Token Passing).</li>
+    </ol>
+
+    <p><strong>Common Protocols:</strong></p>
+    <ul>
+        <li><strong>Ethernet (IEEE 802.3):</strong> The de facto standard for Local Area Networks. Uses CSMA/CD (legacy) or Full-Duplex switching (modern).</li>
+        <li><strong>Wi-Fi (IEEE 802.11):</strong> Uses CSMA/CA (Collision Avoidance) due to the inability to detect collisions in wireless space (Hidden Node Problem).</li>
+        <li><strong>Point-to-Point Protocol (PPP):</strong> Used for direct serial links between two routers, featuring authentication (PAP/CHAP) and multi-protocol encapsulation.</li>
+        <li><strong>High-Level Data Link Control (HDLC):</strong> A bit-oriented synchronous protocol used extensively in legacy leased-line WANs.</li>
+    </ul>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.11 What is Ethernet? Describe its role in networking and its evolution over the years.</h3>
+    
+    <p><strong>Definition:</strong><br>
+    Ethernet is a family of frame-based computer networking technologies standardized under the <strong>IEEE 802.3</strong> working group. It defines both the Physical Layer (cabling, signaling) and the Data Link Layer Media Access Control (MAC) protocol. Its defining architectural principle is <strong>Carrier Sense Multiple Access with Collision Detection (CSMA/CD)</strong>, though modern switched Ethernet has largely deprecated collision detection in favor of full-duplex micro-segmentation.</p>
+
+    <p><strong>Role in Networking:</strong><br>
+    Ethernet is the universal lingua franca of wired Local Area Networks. It provides a cost-effective, scalable, and backward-compatible method for connecting devices within a building or campus. Its ubiquity has extended from the access layer to the core of metropolitan networks (Metro Ethernet) and data center fabrics.</p>
+
+    <p><strong>Evolutionary Trajectory:</strong></p>
+
+    <!-- Table: Ethernet Evolution -->
+    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; border: 2px solid #555; font-family: 'Courier New', Courier, monospace; font-size: 0.9em;">
+        <thead>
+            <tr style="background-color: #e0e0e0; color: #333;">
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 15%;">Era</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 20%;">Standard</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 15%;">Speed</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 25%;">Medium / Topology</th>
+                <th style="border: 1px solid #555; padding: 10px; text-align: left; width: 25%;">Significance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px;">1980s</td>
+                <td style="border: 1px solid #555; padding: 8px;">10BASE5 / 10BASE2</td>
+                <td style="border: 1px solid #555; padding: 8px;">10 Mbps</td>
+                <td style="border: 1px solid #555; padding: 8px;">Thick/Thin Coax (Bus)</td>
+                <td style="border: 1px solid #555; padding: 8px;">The original shared collision domain.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px;">1990s</td>
+                <td style="border: 1px solid #555; padding: 8px;">10BASE-T</td>
+                <td style="border: 1px solid #555; padding: 8px;">10 Mbps</td>
+                <td style="border: 1px solid #555; padding: 8px;">UTP Cat3 (Star via Hub)</td>
+                <td style="border: 1px solid #555; padding: 8px;">Introduction of structured cabling and RJ45 connectors.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px;">Late 1990s</td>
+                <td style="border: 1px solid #555; padding: 8px;">100BASE-TX</td>
+                <td style="border: 1px solid #555; padding: 8px;">100 Mbps (Fast Ethernet)</td>
+                <td style="border: 1px solid #555; padding: 8px;">UTP Cat5 (Star via Switch)</td>
+                <td style="border: 1px solid #555; padding: 8px;"><strong>Switching Revolution.</strong> Micro-segmentation eliminates collisions, enabling full duplex.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px;">2000s</td>
+                <td style="border: 1px solid #555; padding: 8px;">1000BASE-T</td>
+                <td style="border: 1px solid #555; padding: 8px;">1 Gbps (Gigabit)</td>
+                <td style="border: 1px solid #555; padding: 8px;">UTP Cat5e/6</td>
+                <td style="border: 1px solid #555; padding: 8px;">Commoditization of high bandwidth to the desktop.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #555; padding: 8px;">2010s</td>
+                <td style="border: 1px solid #555; padding: 8px;">10GBASE-T</td>
+                <td style="border: 1px solid #555; padding: 8px;">10 Gbps</td>
+                <td style="border: 1px solid #555; padding: 8px;">UTP Cat6a / Fiber</td>
+                <td style="border: 1px solid #555; padding: 8px;">Server access and backbone aggregation.</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="border: 1px solid #555; padding: 8px;">2020s</td>
+                <td style="border: 1px solid #555; padding: 8px;">25G / 40G / 100G / 400G</td>
+                <td style="border: 1px solid #555; padding: 8px;">Multi-Gig</td>
+                <td style="border: 1px solid #555; padding: 8px;">Fiber (SMF/MMF), Twinax</td>
+                <td style="border: 1px solid #555; padding: 8px;">Data center spine-leaf architectures and hyperscale cloud networking.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 style="color: #444; margin-top: 20px;">2.12 Explain how Bluetooth operates in the wireless communication space.</h3>
+    
+    <p><strong>Operational Paradigm:</strong><br>
+    Bluetooth, standardized under <strong>IEEE 802.15.1</strong>, is a short-range wireless technology designed to supplant cables for interconnecting personal devices, forming a <strong>Wireless Personal Area Network (WPAN)</strong>.</p>
+
+    <p><strong>Key Operational Characteristics:</strong></p>
+    <ol>
+        <li><strong>Frequency and Modulation:</strong> Bluetooth operates in the globally unlicensed <strong>2.4 GHz Industrial, Scientific, and Medical (ISM) band</strong> (2.402 GHz – 2.480 GHz). To combat severe interference from Wi-Fi and microwave ovens, Bluetooth employs <strong>Frequency-Hopping Spread Spectrum (FHSS)</strong>. The transceiver changes carrier frequency <strong>1,600 times per second</strong> across 79 designated channels. This provides robust interference immunity and a baseline level of privacy (confidentiality through obscurity, though encryption is layered on top).</li>
+        <li><strong>Network Topology (Piconet and Scatternet):</strong>
+            <ul>
+                <li><strong>Piconet:</strong> A basic ad-hoc network consisting of one <strong>Master</strong> device and up to <strong>7 active Slave</strong> devices. The Master dictates the hopping sequence and timing synchronization.</li>
+                <li><strong>Scatternet:</strong> Interconnection of multiple Piconets where a device acts as a Slave in one Piconet and a Master in another, enabling data to bridge across independent networks.</li>
+            </ul>
+        </li>
+        <li><strong>Protocol Stack and Profiles:</strong> Unlike a single protocol, Bluetooth defines a rigid hierarchy of <strong>Profiles</strong> (e.g., Advanced Audio Distribution Profile - A2DP, Hands-Free Profile - HFP). These profiles mandate precisely how specific applications (music streaming vs. voice calls) utilize the lower layers. This ensures interoperability between a Samsung phone and a Sony headset, as they both adhere to the same profile specification.</li>
+        <li><strong>Power Classes and Range:</strong>
+            <ul>
+                <li><strong>Class 2 (Standard):</strong> 2.5 mW (+4 dBm), range ~10 meters (33 ft). Used in smartphones and headsets.</li>
+                <li><strong>Class 1 (High Power):</strong> 100 mW (+20 dBm), range ~100 meters. Used in industrial gateways and audio transmitters.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <p><strong>Evolution (Bluetooth Low Energy - BLE):</strong><br>
+    A critical evolution was the introduction of <strong>Bluetooth 4.0 (BLE)</strong>. Unlike Classic Bluetooth, BLE is not designed for continuous high-bitrate audio streaming; it is optimized for <strong>low duty cycle, burst data transmission</strong>. Devices sleep for extended periods, wake momentarily to exchange small packets, and return to sleep. This enables <strong>coin-cell battery life measured in years</strong> for sensors and IoT devices, a feat unattainable by Classic Bluetooth or Wi-Fi.</p>
+</div>
