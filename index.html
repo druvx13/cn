@@ -173,7 +173,7 @@
           <option value="5.html">5. Network Devices and Their Protocols</option>
         </select>
       </div>
-      <iframe id="content-frame" title="Chapter content" src="1.html"></iframe>
+      <iframe id="content-frame" title="Chapter content" src="1.html" sandbox="allow-same-origin"></iframe>
     </main>
   </div>
 
@@ -182,8 +182,10 @@
     const frame = document.getElementById('content-frame');
     const title = document.getElementById('current-title');
     const mobileMenu = document.getElementById('mobile-menu');
+    const allowedFiles = new Set(['1.html', '2.html', '3.html', '4.html', '5.html']);
 
     function setActive(file) {
+      if (!allowedFiles.has(file)) return;
       buttons.forEach((btn) => {
         const active = btn.dataset.file === file;
         btn.classList.toggle('active', active);
